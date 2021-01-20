@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.ibm.project.TestProject.beans.Proveedor" table="Proveedores">
+        <id name="idProveedor" column="id_proveedor" type="int" access="field">
+            <generator class="assigned"/>
+        </id>
+        <property name="nombre" type="java.lang.String" access="field">
+            <column name="nombre" />
+        </property>
+        <property name="fechaAlta" type="java.sql.Date" access="field">
+            <column name="fecha_alta" />
+        </property>
+        <property name="cliente" type="int" access="field">
+            <column name="id_cliente" />
+		</property>
+    </class>
+</hibernate-mapping>
